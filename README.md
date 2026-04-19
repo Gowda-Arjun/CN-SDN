@@ -85,7 +85,6 @@ Expected result:
 ## Verify Blocking and Logs
 From another terminal:
 ```bash
-cd dynamic_host_blocking
 ./scripts/verify_blocking.sh 00:00:00:00:00:04
 ```
 
@@ -99,12 +98,6 @@ Expected evidence:
 - `priority=200` drop rule matching `eth_src=00:00:00:00:00:04`
 - Log lines with `host_blocked` and `block_verified`
 
-## Performance Observation (for report/viva)
-Collect and compare:
-- Latency before and after block (`ping`)
-- Throughput behavior (`iperf` optional)
-- Flow table changes (`ovs-ofctl dump-flows s1`)
-- Event timestamps and packet counters in logs
 
 ## Notes
 - This project is OpenFlow 1.3 based.
@@ -126,9 +119,6 @@ If you see a traceback from `eventlet` / `dns` (greendns path), rebuild the venv
 ./scripts/setup_env_arch.sh
 ```
 
-The setup script now recreates a clean venv and installs a compatible `dnspython`
-pin. The controller launcher also forces `EVENTLET_NO_GREENDNS=yes` before loading
-Ryu.
 
 ## References
 - Ryu SDN Framework documentation
