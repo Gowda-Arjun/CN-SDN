@@ -1,0 +1,4 @@
+2026-04-19 16:26:37,701 {"block_seconds": 60, "broadcast_threshold": 40, "event": "controller_started", "packet_threshold": 120, "ts_epoch_ms": 1776596197701, "window_seconds": 5}
+2026-04-19 16:26:39,690 {"dpid": null, "event": "switch_disconnected", "ts_epoch_ms": 1776596199690}
+2026-04-19 16:26:39,719 {"dpid": 1, "event": "table_miss_installed", "ts_epoch_ms": 1776596199719}
+2026-04-19 16:26:39,720 {"dpid": 1, "event": "switch_connected", "ts_epoch_ms": 1776596199720}
