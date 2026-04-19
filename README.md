@@ -6,12 +6,7 @@ The controller observes traffic behavior in real time, detects suspicious hosts,
 installs blocking flow rules, verifies that those rules exist in the switch,
 and logs all important events.
 
-This design directly matches the guideline requirements:
-- Controller-switch interaction
-- Match-action flow rule design
-- Packet-in handling logic
-- Allowed vs blocked and Normal vs failure scenarios
-- Logging and verification evidence
+
 
 ## Project Features
 1. Suspicious traffic detection
@@ -52,14 +47,12 @@ Ryu 4.34 still expects it. The launcher patches this symbol before importing
 
 ## Setup (Arch Linux)
 ```bash
-cd dynamic_host_blocking
 chmod +x scripts/*.sh
 ./scripts/setup_env_arch.sh
 ```
 
 ## Run Demo
 ```bash
-cd dynamic_host_blocking
 ./scripts/run_demo.sh
 ```
 
